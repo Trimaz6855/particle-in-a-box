@@ -14,6 +14,7 @@ class mainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.setWindowTitle("Particle in a box probability program")
+        self.ui.swgMain.setCurrentIndex(0)
 
         # Arrow button setup
         self.ui.btnNext.clicked.connect(self.next)
@@ -21,6 +22,7 @@ class mainWindow(QMainWindow):
         
         # 2 Dimensional setup
         self.ui.btnProb2Dim.clicked.connect(self.display_2d_prob)
+        self.ui.btnWave2Dim.clicked.connect(self.display_2d_wave)
 
     # Arrow next function
     def next(self):
@@ -42,10 +44,15 @@ class mainWindow(QMainWindow):
             id_current = 2
             self.ui.swgMain.setCurrentIndex(id_current)
 
-    # 2 Dimensional display function
+    # 2 Dimensional probabilty display function
     def display_2d_prob(self):
         l_x, l_y, n_x, n_y = int(self.ui.lnLx2Dim.text()), int(self.ui.lnLy2Dim.text()), int(self.ui.lnNx2Dim.text()), int(self.ui.lnNy2Dim.text())
         plot_2d_prob_density(l_x, l_y, n_x, n_y)
+
+    # 2 Dimensional wave function display function
+    def display_2d_wave(self):
+        l_x, l_y, n_x, n_y = int(self.ui.lnLx2Dim.text()), int(self.ui.lnLy2Dim.text()), int(self.ui.lnNx2Dim.text()), int(self.ui.lnNy2Dim.text())
+        plot_2d_wave_function(l_x, l_y, n_x, n_y)
 
 if __name__ == "__main__":
     app = QApplication([])

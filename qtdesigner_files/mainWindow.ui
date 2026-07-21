@@ -27,7 +27,7 @@
      <enum>QFrame::NoFrame</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="pg1Dim">
      <widget class="QLabel" name="lbl1DimTitle">
@@ -552,6 +552,28 @@
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lnLx1Dim</tabstop>
+  <tabstop>lnNx1Dim</tabstop>
+  <tabstop>btnProb1Dim</tabstop>
+  <tabstop>btnWave1Dim</tabstop>
+  <tabstop>lnLx2Dim</tabstop>
+  <tabstop>lnLy2Dim</tabstop>
+  <tabstop>lnNx2Dim</tabstop>
+  <tabstop>lnNy2Dim</tabstop>
+  <tabstop>btnProb2Dim</tabstop>
+  <tabstop>btnWave2Dim</tabstop>
+  <tabstop>lnLx3Dim</tabstop>
+  <tabstop>lnLy3Dim</tabstop>
+  <tabstop>lnLz3Dim</tabstop>
+  <tabstop>lnNx3Dim</tabstop>
+  <tabstop>lnNy3Dim</tabstop>
+  <tabstop>lnNz3Dim</tabstop>
+  <tabstop>btnProb3Dim</tabstop>
+  <tabstop>btnWave3Dim</tabstop>
+  <tabstop>btnNext</tabstop>
+  <tabstop>btnPrev</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

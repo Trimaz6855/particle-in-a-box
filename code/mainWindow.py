@@ -287,8 +287,27 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.wgMain)
 
         self.retranslateUi(MainWindow)
-        self.swgMain.setCurrentIndex(0)
+        self.swgMain.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.lnLx1Dim, self.lnNx1Dim)
+        MainWindow.setTabOrder(self.lnNx1Dim, self.btnProb1Dim)
+        MainWindow.setTabOrder(self.btnProb1Dim, self.btnWave1Dim)
+        MainWindow.setTabOrder(self.btnWave1Dim, self.lnLx2Dim)
+        MainWindow.setTabOrder(self.lnLx2Dim, self.lnLy2Dim)
+        MainWindow.setTabOrder(self.lnLy2Dim, self.lnNx2Dim)
+        MainWindow.setTabOrder(self.lnNx2Dim, self.lnNy2Dim)
+        MainWindow.setTabOrder(self.lnNy2Dim, self.btnProb2Dim)
+        MainWindow.setTabOrder(self.btnProb2Dim, self.btnWave2Dim)
+        MainWindow.setTabOrder(self.btnWave2Dim, self.lnLx3Dim)
+        MainWindow.setTabOrder(self.lnLx3Dim, self.lnLy3Dim)
+        MainWindow.setTabOrder(self.lnLy3Dim, self.lnLz3Dim)
+        MainWindow.setTabOrder(self.lnLz3Dim, self.lnNx3Dim)
+        MainWindow.setTabOrder(self.lnNx3Dim, self.lnNy3Dim)
+        MainWindow.setTabOrder(self.lnNy3Dim, self.lnNz3Dim)
+        MainWindow.setTabOrder(self.lnNz3Dim, self.btnProb3Dim)
+        MainWindow.setTabOrder(self.btnProb3Dim, self.btnWave3Dim)
+        MainWindow.setTabOrder(self.btnWave3Dim, self.btnNext)
+        MainWindow.setTabOrder(self.btnNext, self.btnPrev)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
