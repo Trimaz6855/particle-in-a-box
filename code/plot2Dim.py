@@ -4,7 +4,7 @@ import numpy as np
 import sympy as sp 
 from matplotlib import cm
 
-def plot_prob_density(l_x_val, l_y_val, n_x_val, n_y_val):
+def plot_2d_prob_density(l_x_val, l_y_val, n_x_val, n_y_val):
     fig = plt.figure(figsize=plt.figaspect(0.5))
     fig.suptitle("Graph of the probabilty density function for a 2D particle in a box system")
     plt.figtext(0.01, 0.5, f"L_x: {l_x_val}\nL_y: {l_y_val}\nn_x: {n_x_val}\nn_y: {n_y_val}")
@@ -19,7 +19,7 @@ def plot_prob_density(l_x_val, l_y_val, n_x_val, n_y_val):
     ax.plot_surface(x_vals, y_vals, prob_density_values, cmap=cm.inferno)
     plt.show()
 
-def plot_wave_function(l_x_val, l_y_val, n_x_val, n_y_val):
+def plot_2d_wave_function(l_x_val, l_y_val, n_x_val, n_y_val):
     fig = plt.figure(figsize=plt.figaspect(0.5))        
     plt.figtext(0.01, 0.5, f"L_x: {l_x_val}\nL_y: {l_y_val}\nn_x: {n_x_val}\nn_y: {n_y_val}")
     fig.suptitle("Graph of the wave function for a 2D particle in a box system")
@@ -38,5 +38,5 @@ def plot_wave_function(l_x_val, l_y_val, n_x_val, n_y_val):
 
 
 if __name__ == "__main__":
-    plot_wave_function(l_x_val = 1, l_y_val = 1, n_x_val = 4, n_y_val = 4)
-    plot_prob_density(l_x_val = 1, l_y_val = 1, n_x_val = 4, n_y_val = 4)
+    plot_2d_wave_function(l_x_val = 1, l_y_val = 1, n_x_val = 4, n_y_val = 4)
+    plot_2d_prob_density(l_x_val = 1, l_y_val = 1, n_x_val = 4, n_y_val = 4)
