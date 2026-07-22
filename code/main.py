@@ -1,6 +1,8 @@
 from mainWindow import Ui_MainWindow
 
+from plot1Dim import plot_1d_prob_density, plot_1d_wave_function
 from plot2Dim import plot_2d_prob_density, plot_2d_wave_function
+#from plot3Dim import plot_3d_prob_density, plot_3d_wave_function
 
 from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox
 
@@ -44,7 +46,15 @@ class mainWindow(QMainWindow):
             id_current = 2
             self.ui.swgMain.setCurrentIndex(id_current)
 
-    # 2 Dimensional probabilty display function
+    # 1 Dimensional probability density display function
+    def display_1d_prob(self):
+        pass
+
+    # 1 Dimensional wave function display function
+    def display_1d_wave(self):
+        pass
+
+    # 2 Dimensional probabilty density display function
     def display_2d_prob(self):
         try:
             l_x, l_y, n_x, n_y = float(self.ui.lnLx2Dim.text()), float(self.ui.lnLy2Dim.text()), int(self.ui.lnNx2Dim.text()), int(self.ui.lnNy2Dim.text())
@@ -61,6 +71,14 @@ class mainWindow(QMainWindow):
             QMessageBox.information(self, "Error", "The input values for the lengths must be valid floats and the input values for the energy levels must be valid integers!")
         else:
             plot_2d_wave_function(l_x, l_y, n_x, n_y)
+    
+    # 3 Dimensional probability density display function
+    def display_3d_prob(self):
+        pass
+
+    # 3 Dimensional wave function display function
+    def display_3d_wave(self):
+        pass
 
 if __name__ == "__main__":
     app = QApplication([])
