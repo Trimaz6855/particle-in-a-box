@@ -21,6 +21,10 @@ class mainWindow(QMainWindow):
         # Arrow button setup
         self.ui.btnNext.clicked.connect(self.next)
         self.ui.btnPrev.clicked.connect(self.prev)
+
+        # 1 Dimensional setup
+        self.ui.btnProb1Dim.clicked.connect(self.display_1d_prob)
+        self.ui.btnWave1Dim.clicked.connect(self.display_1d_wave)
         
         # 2 Dimensional setup
         self.ui.btnProb2Dim.clicked.connect(self.display_2d_prob)
@@ -48,11 +52,21 @@ class mainWindow(QMainWindow):
 
     # 1 Dimensional probability density display function
     def display_1d_prob(self):
-        pass
+        try:
+            l_x, n_x = float(self.ui.lnLx1Dim.text()), int(self.ui.lnNx1Dim.text())
+        except ValueError:
+            QMessageBox.information(self, "Error", "The input value for the length of the box must be a valid float and the value for the energy level must be a valid integer!")
+        else:
+            plot_1d_prob_density(l_x, n_x)
 
     # 1 Dimensional wave function display function
     def display_1d_wave(self):
-        pass
+        try:
+            l_x, n_x = float(self.ui.lnLx1Dim.text()), int(self.ui.lnNx1Dim.text())
+        except ValueError:
+            QMessageBox.information(self, "Error", "The input value for the length of the box must be a valid float and the value for the energy level must be a valid integer!")
+        else:
+            plot_1d_wave_function(l_x, n_x)
 
     # 2 Dimensional probabilty density display function
     def display_2d_prob(self):
