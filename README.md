@@ -79,7 +79,7 @@ def calculate3(l_x_val, l_y_val, l_z_val, n_x_val, n_y_val, n_z_val, z_value):
 
 ### Testing:
 
-Using the test suite below I tested the time taken for each of these functions to calculate the probability density for each value of x, y and z 10 times, before printing the average amount of time taken to calculate all probability density values once.
+Using the test script below I tested the time taken for each of these functions to calculate the probability density for each value of x, y and z 10 times, before printing the average amount of time taken to calculate all probability density values once.
 
 ```
 z_vals = np.linspace(0, 1, 1000)
@@ -107,7 +107,7 @@ print(f"Speedup: {t1/t2:.2f}x")
 print(f"Further Speedup: {t2/t3}x")
 ```
 
-The results of the test suite are shown below:
+The results of the test script are shown below:
 
 | Method           | Time per full calculation (s)| Performance Improvement (Relative to method above)|
 |:-----------------|:----------------------------:|--------------------------------------------------:|
@@ -116,4 +116,6 @@ The results of the test suite are shown below:
 |Further Optimised |0.250453                      |2.33x                                              |
 
 
-![alt text](image-3.png)
+The screenshot below shows the full, unrounded results from the test script.
+
+![alt text](/images/terminal-test-screenshot.png)
