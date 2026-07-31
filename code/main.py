@@ -2,7 +2,7 @@ from mainWindow import Ui_MainWindow
 
 from plot1Dim import plot_1d_prob_density, plot_1d_wave_function
 from plot2Dim import plot_2d_prob_density, plot_2d_wave_function
-#from plot3Dim import plot_3d_prob_density, plot_3d_wave_function
+from plot3Dim import plot_3d_prob_density, plot_3d_wave_function
 
 from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox
 
@@ -29,6 +29,10 @@ class mainWindow(QMainWindow):
         # 2 Dimensional setup
         self.ui.btnProb2Dim.clicked.connect(self.display_2d_prob)
         self.ui.btnWave2Dim.clicked.connect(self.display_2d_wave)
+
+        # 3 Dimensional setup
+        self.ui.btnProb3Dim.clicked.connect(self.display_3d_prob)
+        self.ui.btnWave3Dim.clicked.connect(self.display_3d_wave)
 
     # Arrow next function
     def next(self):
@@ -80,7 +84,7 @@ class mainWindow(QMainWindow):
     # 2 Dimensional wave function display function
     def display_2d_wave(self):
         try:
-            l_x, l_y, n_x, n_y = int(self.ui.lnLx2Dim.text()), int(self.ui.lnLy2Dim.text()), int(self.ui.lnNx2Dim.text()), int(self.ui.lnNy2Dim.text())
+            l_x, l_y, n_x, n_y = float(self.ui.lnLx2Dim.text()), float(self.ui.lnLy2Dim.text()), int(self.ui.lnNx2Dim.text()), int(self.ui.lnNy2Dim.text())
         except ValueError:
             QMessageBox.information(self, "Error", "The input values for the lengths must be valid floats and the input values for the energy levels must be valid integers!")
         else:
@@ -88,11 +92,21 @@ class mainWindow(QMainWindow):
     
     # 3 Dimensional probability density display function
     def display_3d_prob(self):
-        pass
+        try:
+            l_x, l_y, l_z, n_x, n_y, n_z = float(self.ui.lnLx3Dim.text()), float(self.ui.lnLy3Dim.text()), float(self.ui.lnLz3Dim.text()), int(self.ui.lnNx3Dim.text()), int(self.ui.lnNy3Dim.text()), int(self.ui.lnNz3Dim.text())
+        except ValueError:
+            QMessageBox.information(self, "Error", "The input values for the lengths must be valid floats and the input values for the energy levels must be valid integers!")
+        else:
+            plot_3d_prob_density(l_x, l_y, l_z, n_x, n_y, n_z)
 
     # 3 Dimensional wave function display function
     def display_3d_wave(self):
-        pass
+        try:
+            l_x, l_y, l_z, n_x, n_y, n_z = float(self.ui.lnLx3Dim.text()), float(self.ui.lnLy3Dim.text()), float(self.ui.lnLz3Dim.text()), int(self.ui.lnNx3Dim.text()), int(self.ui.lnNy3Dim.text()), int(self.ui.lnNz3Dim.text())
+        except ValueError:
+            QMessageBox.information(self, "Error", "The input values for the lengths must be valid floats and the input values for the energy levels must be valid integers!")
+        else:
+            plot_3d_wave_function(l_x, l_y, l_z, n_x, n_y, n_z)    
 
 if __name__ == "__main__":
     app = QApplication([])

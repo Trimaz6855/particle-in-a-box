@@ -1,9 +1,11 @@
-import matplotlib.pyplot as plt
 import matplotlib as mpl
+mpl.use("QtAgg")
+import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.widgets import Slider
 import numpy as np
 import sympy as sp 
+
 
 def plot_3d_prob_density(l_x_val, l_y_val, l_z_val, n_x_val, n_y_val, n_z_val):
 
