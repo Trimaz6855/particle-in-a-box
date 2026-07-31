@@ -111,9 +111,9 @@ The results of the test script are shown below:
 
 | Method           | Time per full calculation (s)| Performance Improvement (Relative to method above)|
 |:-----------------|:----------------------------:|--------------------------------------------------:|
-|Original          |43.327683                     |1x                                                 |
-|Optimised         |0.584167                      |74.17x                                             |
-|Further Optimised |0.250453                      |2.33x                                              |
+|Original          |29.309580                     |1x                                                 |
+|Optimised         |0.390079                      |75.137497x                                         |
+|Further Optimised |0.183762                      |2.122745x                                          |
 
 
 The screenshot below shows the full, unrounded results from the test script.
