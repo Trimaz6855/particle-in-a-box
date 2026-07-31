@@ -23,5 +23,5 @@ t3 = timeit.timeit(
 print(f"Original: {t1/10:.6f} s")
 print(f"Optimised: {t2/10:.6f} s")
 print(f"Further Optimised: {t3/10:.6f} s")
-print(f"Speedup: {t1/t2:.2f}x")
-print(f"Further Speedup: {t2/t3}x")
+print(f"Speedup: {t1/t2:.6f}x")
+print(f"Further Speedup: {t2/t3:.6f}x")
