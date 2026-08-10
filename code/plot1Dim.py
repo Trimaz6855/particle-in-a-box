@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
-import sympy as sp 
 from matplotlib import cm
 
 def plot_1d_prob_density(l_x_val, n_x_val):
