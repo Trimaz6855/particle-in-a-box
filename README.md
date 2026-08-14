@@ -118,4 +118,4 @@ The results of the test script are shown below:
 
 The screenshot below shows the full, unrounded results from the test script.
 
-![alt text](/images/terminal-test-screenshot.png)
+![alt text](/images/tests/terminal-test-screenshot.png)
