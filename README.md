@@ -1,5 +1,50 @@
 # Particle in a box visualisation program
+
+## Table of Contents
+
+  1. [Installation and Usage](#installation-and-usage)
+        - [Installation:](#installation)
+        - [Running the program:](#running-the-program)
+            - [1 - Run directly from main directory](#1---run-directly-from-main-directory)
+            - [2 - Open code folder and run](#2---open-code-folder-and-run)
+  2. [Intentions](#intentions)
+  3. [Particle in a 1 Dimensional Box](#particle-in-a-1-dimensional-box)
+  4. [Particle in a 2 Dimensional Box](#particle-in-a-2-dimensional-box)
+  5. [Particle in a 3 Dimensional Box](#particle-in-a-3-dimensional-box)
+        - [Implementation:](#implementation)
+        - [Testing:](#testing)
+
+## Installation and Usage
+
+### Installation:
+
+Run the following command to clone the repository locally:
+```
+git clone https://github.com/Trimaz6855/particle-in-a-box.git
+```
+
+Once you have cloned the repository, navigate to the main folder and run the
+following command to install the required python libraries:
+```
+python3 -m pip install -r requirements.txt
+```
+
+### Running the program:
+
+Now to run the main user interface of the project, either:
+
+#### 1 - Run directly from main directory
+```
+python3 code/main.py
+```
+
+#### 2 - Open code folder and run
+```
+python3 main.py
+```
+
 ## Intentions
+
 This project is intended to be a simple gui based program that allows the user to choose the number of dimensions the box the particle is contained within has (up to 3 dimensions) and then input the following information:
 
 - The length of the box in each dimension.
@@ -10,6 +55,8 @@ the user can then press a button to generate a graph of the probability density 
 I am designing this program as an extension of my 1st year physics module on Quantum Physics.
 
 ## Particle in a 1 Dimensional Box
+
+
 
 ## Particle in a 2 Dimensional Box
 
