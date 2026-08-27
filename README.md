@@ -54,14 +54,7 @@ the user can then press a button to generate a graph of the probability density 
 
 I am designing this program as an extension of my 1st year physics module on Quantum Physics.
 
-## Particle in a 1 Dimensional Box
-
-
-
-## Particle in a 2 Dimensional Box
-
 ## Particle in a 3 Dimensional Box
-
 
 ### Implementation:
 
